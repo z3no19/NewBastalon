@@ -22,7 +22,7 @@ Personaggione = Personaggio(100, 2, 10)
 Inventarione = Inventario(Arma1,Arma2,ArmaHolder)
 Cura = Cura(7,7,20)
 Nemico1 = Nemico(100,10,4)
-Npc = Npc(1)
+Npc = Npc(2)
 Oggetti = Oggetti(1)
 
 #print(Personaggio)
@@ -33,17 +33,23 @@ Oggetti = Oggetti(1)
 #print(Oggetti)
 
 
+# print("caso d'suo 1:combattimento")
 
-while Nemico1.Vita > 0:
-    Personaggione.Combattimento(Inventarione.Arma1,Inventarione.Arma2, Nemico1)
+# while Nemico1.Vita > 0:
+#     Personaggione.Combattimento(Inventarione.Arma1,Inventarione.Arma2, Nemico1)
 
 
-print(Inventarione)
-print("Hai trovato un'arma nuova!")
-Inventarione.ArmaHolder = Inventarione.GetArmaClass(Registro, Loot.DropArma())
-Inventarione.CambioArma()
-print(Inventarione)
+# print(Inventarione)
+# print("Hai trovato un'arma nuova!")
+# Inventarione.ArmaHolder = Inventarione.GetArmaClass(Registro, Loot.DropArma())
+# Inventarione.CambioArma()
+# print(Inventarione)
 
+
+
+print("caso d'uso 2: progressione storia e interazione con npc")
+
+print(Npc.Interazione())
 
 # DannoEffettivo = Personaggio.Attacco(Personaggio.Forza,Arma1.DannoArma)
 # print(DannoEffettivo)
