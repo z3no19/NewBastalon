@@ -17,6 +17,7 @@ class Npc():
 
 
     def SceltaDialogo(self,ProgressioneStoria):
+        
         pass
 
     def __str__(self):
