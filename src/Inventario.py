@@ -1,6 +1,7 @@
 from abc import ABC
 from src.Armi import Arma
 
+
 class Inventario():
     def __init__(self, Arma1, Arma2, ArmaHolder):
 
@@ -17,7 +18,7 @@ class Inventario():
 
     def CambioArma(self):
         print("Quale arma vuoi sostituire? X/C")
-        user_input = input()
+        user_input = input().upper()
         if user_input == "X":
             self.Arma1 = self.ArmaHolder
             print("arma1 cambiata")

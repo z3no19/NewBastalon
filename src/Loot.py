@@ -14,5 +14,5 @@ class Loot():
     
     def DropMonete():
         Monete = random.randint(0, 500)
-        print("Nemico ha droppato",Monete,"monete")
+        print("Hai ottenuto ",Monete,"monete")
  

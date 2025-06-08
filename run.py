@@ -23,7 +23,7 @@ Inventarione = Inventario(Arma1,Arma2,ArmaHolder)
 Cura = Cura(7,7,20)
 Nemico1 = Nemico(100,10,4)
 Npc = Npc(2)
-Oggetti = Oggetti(1)
+Oggettino = Oggetti(1)
 
 #print(Personaggio)
 #print(Inventario)
@@ -47,9 +47,14 @@ Oggetti = Oggetti(1)
 
 
 
-print("caso d'uso 2: progressione storia e interazione con npc")
+# print("caso d'uso 2: progressione storia e interazione con npc")
 
-print(Npc.Interazione())
+# print(Npc.Interazione())
+
+print("caso d'uso 3: distruzione oggetto e ottenimento loot")
+
+while Oggettino.Vita > 0:
+    Personaggione.DistruggiOggetto(Inventarione.Arma1,Inventarione.Arma2, Oggettino)
 
 # DannoEffettivo = Personaggio.Attacco(Personaggio.Forza,Arma1.DannoArma)
 # print(DannoEffettivo)

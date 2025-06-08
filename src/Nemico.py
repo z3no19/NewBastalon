@@ -11,7 +11,7 @@ class Nemico():
     def LifeCheck(self):
         if self.Vita <= 0:
             print("Nemico Morto")
-            Loot.DropMonete()
+            self.DroppaLoot()
 
     def Movimento(self, Agilita):
         pass

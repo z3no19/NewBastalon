@@ -2,6 +2,7 @@ from abc import ABC
 from src.Armi import Arma
 from src.Inventario import Inventario
 from src.Nemico import Nemico
+from .Oggetti import Oggetti
 import random
 
 class Personaggio():
@@ -40,10 +41,10 @@ class Personaggio():
 
     def Combattimento(self, Arma1: Arma,Arma2: Arma, Nemico: Nemico):
         print("Vuoi attaccare o schivare? Attacca'X' Schiva 'C'")
-        user_input = input()
+        user_input = input().upper()
         if user_input == "X":
             print("Con Quale arma vuoi attaccare? Arma 1 'X' o Arma 2 'C'?")
-            user_input = input()
+            user_input = input().upper()
             if user_input == "X":
                 self.Attacco(Arma1.DannoArma,Nemico)
                 self.RiceviDanno(Nemico)
@@ -53,11 +54,25 @@ class Personaggio():
 
         elif user_input == "C":
             self.Schivata(Nemico)
+
+    def DistruggiOggetto(self, Arma1: Arma,Arma2: Arma, Oggetti: Oggetti):
+        print("Hai trovato una cassa, cosa vuoi fare? Attacca'X' Vattene 'C'")
+        user_input = input().upper()
+        if user_input == "X":
+            print("Con Quale arma vuoi attaccare? Arma 1 'X' o Arma 2 'C'?")
+            user_input = input().upper()
+            if user_input == "X":
+                self.Attacco(Arma1.DannoArma,Oggetti)
+            elif user_input == "C":
+                self.Attacco(Arma2.DannoArma,Oggetti)
+        elif user_input == "C":
+            print("te ne sei andato")
+            quit()
       
     def LifeCheck(self):
         if self.Vita <= 0:
             print("Sei Morto")
-            quit()
+        quit()
 
-    def __str__(self):
-        return f"Le statistiche del personaggio sono: Vita {self.Vita} - Forza {self.Forza} - Agilità {self.Agilita}"
+def __str__(self):
+    return f"Le statistiche del personaggio sono: Vita {self.Vita} - Forza {self.Forza} - Agilità {self.Agilita}"
